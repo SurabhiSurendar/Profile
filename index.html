@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - My Portfolio</title>
     <style>
+        /* Styling for the video background */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -61,6 +78,15 @@
     </style>
 </head>
 <body>
+    <!-- Video background -->
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="media/background-video3-compressed.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Content -->
     <header>
         <h1>Vimalan's Personal Website </h1>
     </header>
@@ -71,20 +97,77 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
+        
         <section class="intro">
-            <h2>Welcome</h2>
-            <p>Hello! I'm Vimalan, a Cloud Solution Engineer at Oracle working for 2 years. Welcome to my portfolio where I showcase my projects and works. Feel free to explore and learn more about what I do.</p>
+            <h2>Hello</h2>
+            <p>I am Vimalan, currently pursuing a Master of Science in Computer Science at Georgia Institute of Technology, specializing 
+                in Computing Systems and Cloud Computing. My additional interests include Embedded Systems and Machine Learning.</p>
+
+            <p>Recently, I collaborated with a team at Georgia Tech on a healthcare project to develop a mobile electrochemical sensing 
+                platform. Before this, I worked as a Cloud Solution Engineer at Oracle for two years, where I gained expertise in architecting 
+                secure, scalable, and high-performing cloud environments.</p>    
+                
+            <p>During my time at Oracle, I supported over 50 clients across the Japan-Asia-Pacific region. My professional projects involved 
+                application and database migration, automation of cloud tenancy management tasks, and resource optimization, contributing to 
+                significant cost savings and operational efficiency.</p>    
         </section>
+
         <section class="featured-project">
             <h2>Featured Project</h2>
             <h3>Blockchain based energy transaction in microgrid</h3>
 	    <p>This project aims to provide a solution for how blockchain can facilitate cost reduction in microgrids. By using blockchain, energy is transferred directly from producers to consumers, eliminating additional service charges. The system employs a bidding mechanism, ensuring that the producer offering the lowest cost energy is automatically matched with the consumer. A smart contract within the blockchain, shared among participants, maintains immutable transaction records.</p>
-	    <a align="right" href="https://ieeexplore.ieee.org/document/10040176">Click here to read more</a>
-	    <br><br><br><br>
-            <a href="projects.html">View More Projects</a>
-	    <br><br><br><br>
-	    	
+	    <a align="right" href="https://ieeexplore.ieee.org/document/10040176">Read more</a>
+	    <br><br>
+            <div style="text-align: center;">
+                <a  href="projects.html" 
+                style="
+                    display: inline-block; 
+                    padding: 10px 20px; 
+                    background-color: #720808; 
+                    color: white; 
+                    text-decoration: none; 
+                    border-radius: 5px; 
+                    text-align: center;
+                    font-size: 16px;
+                    transition: background-color 0.3s;"
+                onmouseover="this.style.backgroundColor='#000000';"
+                onmouseout="this.style.backgroundColor='#720808';">
+                    View More Projects
+                </a>
+            </div>
+	    
         </section>
+
+        <section class="featured-project">
+            <h2>Recent Project</h2>
+            <h3>Mobile & Real-Time Electrochemical Sensing Platform</h3>
+	    <p>Mobile healthcare sensing enables real-time monitoring for chronic conditions, like glucose levels, at home. 
+            A custom miniature potentiostat was developed, supporting diverse applications beyond healthcare, such as 
+            environmental testing. Integrated with an ESP32 microcontroller and Flutter-based app, it processes and displays 
+            data via Bluetooth, enhancing accessibility and usability.</p>
+	    <a align="right" href="https://github.com/VimalanKM/Real-Time-Sensing-App---Bluetooth---Flutter">Read more</a>
+	    <br><br>
+            <div style="text-align: center;">
+                <a  href="projects.html" 
+                style="
+                    display: inline-block; 
+                    padding: 10px 20px; 
+                    background-color: #720808; 
+                    color: white; 
+                    text-decoration: none; 
+                    border-radius: 5px; 
+                    text-align: center;
+                    font-size: 16px;
+                    transition: background-color 0.3s;"
+                onmouseover="this.style.backgroundColor='#000000';"
+                onmouseout="this.style.backgroundColor='#720808';">
+                    View More Projects
+                </a>
+            </div>
+	    <br><br><br><br>
+        </section>
+
+        
     </div>
     <footer class="footer">
         <p>&copy; Powered by Honor Zinc</p>
